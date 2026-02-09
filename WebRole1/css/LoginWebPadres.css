@@ -1,0 +1,153 @@
+﻿body {
+  /*padding-top: 40px;
+  padding-bottom: 40px;*/
+  background-color: #E8E8E8;
+  
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+
+.login {
+  max-width: 1500px;
+   /*min-width: 330px;*/
+  padding: 15px;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+  border-radius: 25px;
+  border: 1px solid #000000;
+  
+}
+
+.loginInicio {
+  max-width: 400px;
+  /*min-width: 330px;*/
+  padding: 15px;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+  border-radius: 25px;
+  border: 1px solid #000000;
+ 
+}
+
+.loginInicioRegistro {
+  max-width: 700px;
+  /*min-width: 330px;*/
+  padding: 15px;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+  border-radius: 25px;
+  border: 1px solid #000000;
+ 
+}
+
+
+/* enable absolute positioning */
+.inner-addon { 
+    position: relative; 
+    padding-bottom :5px;
+}
+
+/* style icon */
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+
+/* align icon */
+.left-addon .glyphicon  { left:  0px;}
+.right-addon .glyphicon { right: 0px;}
+
+/* add padding  */
+.left-addon input  { padding-left:  30px; }
+.right-addon input { padding-right: 30px; }
+
+.btn-success-docBox {
+  background-color: #086faa; /*#086faa;*/
+  border-color: #086faa; /*#086faa;*/
+  color: #FFFFFF;
+}
+
+.btn-success-docBox-gris {
+  background-color: #bababa; /*#086faa;*/
+  border-color: #808080; /*#086faa;*/
+  color: #086faa;
+}
+
+.btn-success-docBox:hover,
+.btn-success-docBox:focus,
+.btn-success-docBox.focus {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.btn-login {
+  color: #fff;
+  background-color: #086faa;
+  border-color: #086faa;
+}
+
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background-color: #086faa;
+  display:none;
+
+}
+
+.close {
+  color: #FFFFFF;
+}
+
+.label {
+  color: #FFFFFF;
+}
+
+.btn.focus, 
+.btn:focus, 
+.btn:hover {
+  color: #FFFFFF;
+  background-color: #086faa;/*#086faa; #086faa;*/
+  text-decoration: none;
+}
+
+
+.letramenu {
+
+}

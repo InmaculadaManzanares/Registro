@@ -1,0 +1,45 @@
+empresa;centro;nombre;email;fecha;Entrada/Salida;lugar;obs;Ubicacion;Dispositivo
+Docland;Málaga;Ana Baron;abaron@docland.es;2021-10-28;;;;;
+Docland;Málaga;Antonia Mari;amartin@spaceland.es;2021-10-28;Entrada;Oficina;Oficina;29006 Calle Flauta Mágica 5a;HUAWEI-ALP-L09
+Docland;Colmenar;Adrian Martín Delgado;amartind@docland.es;2021-10-28;;;;;
+Docland;Colmenar;Carmen Beltran Reinoso;cbeltran@docland.es;2021-10-28;;;;;
+Docland;Málaga;Carlos Cayuela;ccayuela@docland.es;2021-10-28;;;;;
+Docland;Colmenar;Carlos Jose Gallardo Sanchez;cgallardos@docland.es;2021-10-28;Entrada;Oficina;Oficina;29170 Calle Ramon y Cajal 48;Xiaomi-M2012K11G
+Docland;Málaga;Cristian Martin;cmartin@docland.es;2021-10-28;Entrada;Oficina;Oficina;29006 Calle Flauta Mágica 5a;samsung-SM-G360F
+Docland;Colmenar;Cristian Martín Rodríguez;cmartinr@docland.es;2021-10-28;;;;;
+Docland;Colmenar;Cristina Montañez López;cmontañezl@docland.es;2021-10-28;;;;;
+Docland;Málaga;Eva M. Elena;eelena@docland.es;2021-10-28;;;;;
+Docland;Málaga;Francisco José Fernández;fjfernandez@docland.es;2021-10-28;;;;;
+Docland;Colmenar;Francisco Javier Oliva Palazón;folivap@docland.es;2021-10-28;;;;;
+Docland;Málaga;Ginesa Camuñez;gcamunez@docland.es;2021-10-28;;;;;
+Docland;Colmenar;Isabel María Mérida Gaspar;imeridag@docland.es;2021-10-28;;;;;
+Docland;Colmenar;Isidro Valverde Ortigosa;ivalverdeo@docland.es;2021-10-28;Entrada;Oficina;Oficina;29170 Calle Ramon y Cajal 34;Xiaomi-MI 9
+Docland;Colmenar;Josefa Cabrera Llorente;jcabreral@docland.es;2021-10-28;Entrada;Oficina;Oficina;29170 Calle Ramon y Cajal 48;Xiaomi-Redmi Note 8 Pro
+Docland;Colmenar;Josefa Cabrera Llorente;jcabreral@docland.es;2021-10-28;Salida;Oficina;Oficina;29170 Calle Ramon y Cajal 34;Xiaomi-Redmi Note 8 Pro
+Docland;Colmenar;Josefa Cabrera Llorente;jcabreral@docland.es;2021-10-28;Entrada;Oficina;Oficina;29170 Calle Ramon y Cajal 48;Xiaomi-Redmi Note 8 Pro
+Docland;Colmenar;Jose Miguel Godoy Mateos;jgodoym@docland.es;2021-10-28;;;;;
+Docland;Colmenar;Jose Antonio Gutierrez Cordero;jgutierrezc@docland.es;2021-10-28;;;;;
+Docland;Málaga;Kevin Toré;ktore@docland.es;2021-10-28;;;;;
+Docland;Málaga;Lola Lorente;llorente@docland.es;2021-10-28;Entrada;Oficina;Oficina;29006 Calle Flauta Mágica 5a;HUAWEI-ALP-L09
+Docland;Málaga;María Angeles Valverde;mavalverde@docland.es;2021-10-28;Entrada;Oficina;Oficina;29170 Calle Ramon y Cajal 48;samsung-SM-A715F
+Docland;Colmenar;María Milagros García Melgar;mgarciam@docland.es;2021-10-28;;;;;
+Docland;Málaga;Mari José Rodriguez;mjrodriguez@docland.es;2021-10-28;;;;;
+Docland;Colmenar;María José Rodriguez Fernández;mjrodriguezf@docland.es;2021-10-28;;;;;
+Docland;Colmenar;María José Juárez Santigao;mjuarezs@docland.es;2021-10-28;Entrada;Oficina;Oficina;29170 Calle Ramon y Cajal 48;Xiaomi-POCOPHONE F1
+Docland;Málaga;Mayte López;mlopez@docland.es;2021-10-28;;;;;
+Docland;Colmenar;Miguel Rodríguez Bautista;mrodriguezb@docland.es;2021-10-28;;;;;
+Docland;Colmenar;Natalia Benítez Martín;nbenitezm@docland.es;2021-10-28;;;;;
+Docland;Colmenar;Pablo Campos Godoy;pcamposg@docland.es;2021-10-28;;;;;
+Docland;Colmenar;Rocío Gómez Quintano;rgomezq@docland.es;2021-10-28;Entrada;Oficina;Oficina;29170 Calle Ramon y Cajal 48;Xiaomi-Redmi Note 9 Pro
+Docland;Colmenar;Rocío Podadera Infantes;rpodaderai@docland.es;2021-10-28;Entrada;Oficina;Oficina;29170 Calle Ramon y Cajal 34;samsung-SM-A217F
+Docland;Málaga;Sonia Linero;slinero@docland.es;2021-10-28;Salida;Oficina;Oficina;29006 Calle Flauta Mágica 5a;samsung-SM-G360F
+Docland;Málaga;Sonia Linero;slinero@docland.es;2021-10-28;Entrada;Oficina;Oficina;29006 Calle Flauta Mágica 7;samsung-SM-G360F
+Docland;Málaga;Susana Toledo;stoledo@docland.es;2021-10-28;;;;;
+Spaceland;Málaga;Antonio Blanes;ablanes@spaceland.es;2021-10-28;;;;;
+Spaceland;Málaga;Carlos Hergueta;chergueta@spaceland.es;2021-10-28;;;;;
+Spaceland;Málaga;Enmanuel Lopez;Elopez@spaceland.es;2021-10-28;Entrada;Oficina;Oficina;29006 Calle Flauta Mágica 5;HUAWEI-ALP-L09
+Spaceland;Málaga;Inmaculada Manzanares ;imanzanares@spaceland.es;2021-10-28;Entrada;Oficina;Oficina;Sin localización;samsung-SM-N950F
+Spaceland;Málaga;José Briasco;jbriasco@spaceland.es;2021-10-28;;;;;
+Spaceland;Málaga;Jesús Morcillo;jmorcillo@spaceland.es;2021-10-28;;;;;
+Spaceland;Málaga;José Vergara;jvergara@spaceland.es;2021-10-28;;;;;
+Spaceland;Málaga;Paqui Rodriguez;prodriguez@spaceland.es;2021-10-28;;;;;

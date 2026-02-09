@@ -1,0 +1,617 @@
+@charset "utf-8";
+/* CSS Document */
+@font-face {
+	font-family: "NudistaMedium";
+	src: url('nudista_medium-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+h1 {
+	font-family: NudistaMedium;
+	font-weight: normal;
+}
+@font-face {
+font-family: "NudistaMedium";
+src: url('nudista_medium-webfont.ttf') format('truetype');
+}
+h2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: normal;
+}
+h3 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	line-height: normal;
+}
+
+
+a.menu:link {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+}
+a.menu:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+	text-decoration: underline;
+}
+a.menu:active {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+}
+a.menu:visited {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+}
+a.idiomas:link {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+}
+a.idiomas:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+	text-decoration: underline;
+}
+a.idiomas:active {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+}
+a.idiomas:visited {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+}
+
+.idioma_activado {
+	color: #277cb1;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+.style4 {font-size: 24pt}
+.style5 {font-size: 24pt; font-family: Nudista, "NudistaMedium"; }
+.style6 {color: #004884}
+.style7 {font-weight: bold}
+.style8 {
+	font-size: 13px;
+	font-weight: bold;
+}
+.style11 {
+	font-size: 12px;
+	font-weight: bold;
+}
+.style12 {font-size: 11px}
+.style14 {
+	color: #FFFFFF;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	background-color: #C0DAE9;
+}
+
+
+
+.color_Grupoland {
+	color: #086eaa;
+	font-weight: bold;
+}
+.color_Spaceland {
+	color: #D59F00;
+	font-weight: bold;
+}
+.color_Docland {
+	color: #C03378;
+	font-weight: bold;
+}
+.color_Netland {
+	color: #6AB804;
+	font-weight: bold;
+}
+.color_Proland {
+	color: #FF3E35;
+	font-weight: bold;
+}
+
+.titulo_noticia_home {
+	color: #086eaa;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	text-decoration: none;
+}
+.titulo_ultimas_noticias_home {
+	font-size: 19px;
+	color: #086eaa;
+	font-family: Nudista, "NudistaMedium";
+	text-decoration: none;
+	font-weight: normal;
+}
+.titulo_home {
+	font-size: 19px;
+	color: #086eaa;
+	font-family: Nudista, "NudistaMedium";
+	text-decoration: none;
+}
+.titulo_presupuesto {
+	font-size: 19px;
+	color: #333333;
+	font-family: Nudista, "NudistaMedium";
+	text-decoration: none;
+	font-weight: normal;
+}
+
+
+
+.textos_blancos_destacado_home {
+	color: #FFFFFF;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	text-decoration: none;
+}
+.textomigadepan {
+	color: #FFFFFF;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+.textofoot {
+	color: #696969;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	text-decoration: none;
+}
+a.foot:link {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #696969;
+	text-decoration: none;
+}
+a.foot:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #666666;
+	text-decoration: underline;
+}
+a.foot:active {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #696969;
+	text-decoration: none;
+}
+a.foot:visited {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #696969;
+	text-decoration: none;
+}
+a.texto_grupoland:link {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+}
+a.texto_grupoland:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+	text-decoration: underline;
+}
+a.texto_grupoland:active {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+}
+a.texto_grupoland:visited {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+}
+a.texto_grupoland_spaceland:link {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+}
+a.texto_grupoland_spaceland:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #D59F00;
+	text-decoration: none;
+}
+a.texto_grupoland_spaceland:visited {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+}
+a.texto_grupoland_spaceland:active {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+}
+a.texto_grupoland_docland:link {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+}
+a.texto_grupoland_docland:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #C03378;
+	text-decoration: none;
+}
+a.texto_grupoland_docland:active {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+}
+a.texto_grupoland_docland:visited {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+}
+a.texto_grupoland_netland:link {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+}
+a.texto_grupoland_netland:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #6AB804;
+	text-decoration: none;
+}
+a.texto_grupoland_netland:active {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+}
+a.texto_grupoland_netland:visited {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+}
+a.texto_grupoland_proland:link {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+}
+a.texto_grupoland_proland:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #FF3E35;
+	text-decoration: none;
+}
+a.texto_grupoland_proland:active {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+}
+a.texto_grupoland_proland:visited {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+}
+a.enlace_migadepan_grupoland:link {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+a.enlace_migadepan_grupoland:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+a.enlace_migadepan_grupoland:active {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+a.enlace_migadepan_grupoland:visited {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+a.enlace_destacado_grupoland:link {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #FFFFFF;
+	text-decoration: none;
+	font-variant: small-caps;
+}
+a.enlace_destacado_grupoland:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #FFFFFF;
+	text-decoration: underline;
+	font-variant: small-caps;
+}
+a.enlace_destacado_grupoland:visited {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #FFFFFF;
+	text-decoration: none;
+	font-variant: small-caps;
+}
+a.enlace_destacado_grupoland:active {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #FFFFFF;
+	text-decoration: none;
+	font-variant: small-caps;
+}
+a.enlace_exito_grupoland:link {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #086EAA;
+	text-decoration: none;
+	font-variant: small-caps;
+}
+a.enlace_exito_grupoland:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #086EAA;
+	text-decoration: underline;
+	font-variant: small-caps;
+}
+a.enlace_exito_grupoland:visited {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #086EAA;
+	text-decoration: none;
+	font-variant: small-caps;
+}
+a.enlace_exito_grupoland:active {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #086EAA;
+	text-decoration: none;
+	font-variant: small-caps;
+}
+a.enlace_texto_lateral:link {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #086eaa;
+	text-decoration: none;
+	font-weight: bold;
+}
+a.enlace_texto_lateral:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #086eaa;
+	text-decoration: underline;
+	font-weight: bold;
+}
+a.enlace_texto_lateral:active {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #086eaa;
+	text-decoration: none;
+	font-weight: bold;
+}
+a.enlace_texto_lateral:visited {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #086eaa;
+	text-decoration: none;
+	font-weight: bold;
+}
+.entradatextoNOMBRE2 {
+	FONT-SIZE: 11px;
+	WORD-SPACING: normal;
+	VERTICAL-ALIGN: middle;
+
+	BORDER-LEFT: thin d?????1??K?A?¼x-small; 	
+	WORD-SPACING: normal;
+	VERTICAL-ALIGN: middle;
+	WIDTH: 250px;
+	COLOR: #000000;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	WHITE-SPACE: normal;
+	LETTER-SPACING: normal;
+	HEIGHT: 20px;
+	BACKGROUND-COLOR: #ffffff;
+	border: thin groove;
+}
+a.submenu_docland:link {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #FFFFFF;
+	text-decoration: none;
+	font-weight: normal;
+}
+a.submenu_docland:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #FFFFFF;
+	text-decoration: underline;
+	font-weight: normal;
+}
+a.submenu_docland:active {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #FFFFFF;
+	text-decoration: none;
+	font-weight: normal;
+}
+a.submenu_docland:visited {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #FFFFFF;
+	text-decoration: none;
+	font-weight: normal;
+}
+
+
+
+.titulo_docland {
+	font-size: 19px;
+	color: #da0080;
+	font-family: Nudista, "NudistaMedium";
+	text-decoration: none;
+}
+.titulo_noticia_Docland {
+	color: #da0080;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	text-decoration: none;
+}
+.titulo_spaceland {
+	font-size: 19px;
+	color: #e2830c;
+	font-family: Nudista, "NudistaMedium";
+	text-decoration: none;
+}
+.titulo_noticia_spaceland {
+	color: #e2830c;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	text-decoration: none;
+}
+
+.titulo_netland {
+	font-size: 19px;
+	color: #5fa233;
+	font-family: Nudista, "NudistaMedium";
+	text-decoration: none;
+}
+.titulo_noticia_netland {
+	color: #5fa233;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	text-decoration: none;
+}
+
+.titulo_proland {
+	font-size: 19px;
+	color: #b22323;
+	font-family: Nudista, "NudistaMedium";
+	text-decoration: none;
+}
+.titulo_noticia_proland {
+	color: #b22323;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	text-decoration: none;
+}
+a.enlace_migadepan_docland:link {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+
+a.enlace_migadepan_docland:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+a.enlace_migadepan_docland:visited {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+a.enlace_migadepan_docland:active {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+a.enlace_migadepan_spaceland:link {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+a.enlace_migadepan_spaceland:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+a.enlace_migadepan_spaceland:visited {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+
+a.enlace_migadepan_spaceland:active {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+a.enlace_migadepan_netland:link {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+a.enlace_migadepan_netland:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+a.enlace_migadepan_netland:active {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+a.enlace_migadepan_netland:visited {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+
+.textomigadepanDocland {
+	color: #FFFFFF;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+.textomigadepanSpaceland {
+	color: #FFFFFF;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+.textomigadepanNetland {
+	color: #FFFFFF;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+.textomigadepanProland {
+	color: #FFFFFF;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}

@@ -1,0 +1,10 @@
+﻿SELECT        SOLICITUDES.NSolicitud, SOLICITUDES.Nombre, SOLICITUDES.Apellido1, SOLICITUDES.Apellido2, COLONIAS.Descolonia, TURNOS.DescTurno, SOLICITUDES_TURNOS.CodColonia, SOLICITUDES_TURNOS.CodTurno, 
+                         SOLICITUDES.LocalidadTutor, SOLICITUDES.CPTutor, SOLICITUDES.ProvinciaTutor, SOLICITUDES.Estado, SOLICITUDES.ServBus, SOLICITUDES.FecNac, SOLICITUDES.TelfTutor, SOLICITUDES.Telf2Tutor,
+						 solicitudes.AlturaCentimetros ,(datediff(M ,(SOLICITUDES.FecNac),GETDATE() )/12) as edad,SOLICITUDES .Talla ,solicitudes.sexo
+FROM    
+						             SOLICITUDES LEFT OUTER JOIN
+                         SOLICITUDES_TURNOS ON SOLICITUDES.NSolicitud = SOLICITUDES_TURNOS.NSolicitud LEFT OUTER JOIN
+                         COLONIAS RIGHT OUTER JOIN
+                         TURNOS ON COLONIAS.CodColonia = TURNOS.CodColonia ON SOLICITUDES_TURNOS.CodColonia = TURNOS.CodColonia AND 
+                         SOLICITUDES_TURNOS.CodTurno = TURNOS.CodTurno
+WHERE        (SOLICITUDES_TURNOS.Prioridad = 1)

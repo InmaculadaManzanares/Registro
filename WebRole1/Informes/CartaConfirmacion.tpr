@@ -1,0 +1,18 @@
+﻿SELECT        SOLICITUDES.Clave, SOLICITUDES.NSolicitud, SOLICITUDES.Canal, CAST(DATEDIFF(dd, SOLICITUDES.FecNac, GETDATE()) / 365.25 AS int) AS edad, SOLICITUDES.OficinaReceptora, SOLICITUDES.CuentaCargo, 
+                         SOLICITUDES.FechaEnvio, SOLICITUDES.FechaBaja, SOLICITUDES.FechaConfirma, SOLICITUDES.FechaCargoCta, SOLICITUDES.FechaCarta, SOLICITUDES.ListaEspera, SOLICITUDES.Forzado, SOLICITUDES.PteConsulta, 
+                         SOLICITUDES.FechaRecepcion, SOLICITUDES.ObsPteConsulta, SOLICITUDES.CodGrupo, SOLICITUDES.CodPrecio, SOLICITUDES.ControlRepetidos, SOLICITUDES.Apellido1, SOLICITUDES.Apellido2, SOLICITUDES.Nombre, 
+                         SOLICITUDES.FecNac, SOLICITUDES.Sexo, SOLICITUDES.ServBus, SOLICITUDES.PrimeraAsistencia, SOLICITUDES.DNITutor, SOLICITUDES.Ape1Tutor, SOLICITUDES.Ape2Tutor, SOLICITUDES.NombreTutor, 
+                         SOLICITUDES.CalleTutor, SOLICITUDES.NumeroTutor, SOLICITUDES.BloqueTutor, SOLICITUDES.EscaleraTutor, SOLICITUDES.PisoTutor, SOLICITUDES.LetraTutor, SOLICITUDES.LocalidadTutor, SOLICITUDES.CPTutor, 
+                         SOLICITUDES.CodColonia, SOLICITUDES.CodTurno, SOLICITUDES.CodDormitorio, SOLICITUDES.CodMonitor, SOLICITUDES.FechaReintegro, SOLICITUDES.TipoAsignacion, SOLICITUDES.FechaAsignacion, 
+                         SOLICITUDES.TelfTutor, SOLICITUDES.Regimen, SOLICITUDES.CodAutobus, SOLICITUDES.AlturaMetros, SOLICITUDES.AlturaCentimetros, SOLICITUDES.Talla, SOLICITUDES.CodVinculo, SOLICITUDES.Usuario, 
+                         SOLICITUDES.Telf2Tutor, SOLICITUDES.EmailTutor, SOLICITUDES.Estado, SOLICITUDES.IBAN, SOLICITUDES.Colegio, SOLICITUDES.DNI, SOLICITUDES.DireccionColegio, SOLICITUDES.Curso, SOLICITUDES.ComoAmigos, 
+                         SOLICITUDES.ComoCarteles, SOLICITUDES.ComoInternet, SOLICITUDES.ComoMedios, SOLICITUDES.ComoOtros, SOLICITUDES.ComoPersonal, SOLICITUDES.EstadoCobro, SOLICITUDES.ProvinciaTutor, COLONIAS.Descolonia, 
+                         TURNOS.DescTurno, TURNOS.FecInicio, TURNOS.FecFin, AUTORIZACIONES.DNIAutoriza, AUTORIZACIONES.Ape1Autoriza, AUTORIZACIONES.Ape2Autoriza, AUTORIZACIONES.NomAutoriza,
+                             (SELECT        BytesFichero
+                               FROM            DOCUMENTACION
+                               WHERE        (CodTipoDoc = 'F') AND (NSolicitud = SOLICITUDES.NSolicitud)) AS BytesFichero
+FROM            SOLICITUDES RIGHT OUTER JOIN
+                         AUTORIZACIONES ON SOLICITUDES.NSolicitud = AUTORIZACIONES.NSolicitud LEFT OUTER JOIN
+                         COLONIAS RIGHT OUTER JOIN
+                         TURNOS ON COLONIAS.CodColonia = TURNOS.CodColonia ON SOLICITUDES.CodTurno = TURNOS.CodTurno AND SOLICITUDES.CodColonia = TURNOS.CodColonia
+WHERE        (SOLICITUDES.Estado = N'A') 

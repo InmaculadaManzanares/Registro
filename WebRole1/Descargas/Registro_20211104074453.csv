@@ -1,0 +1,37 @@
+empresa;centro;nombre;email;fecha;Entrada/Salida;lugar;obs;Ubicacion;Dispositivo
+Docland;Málaga;Ana Baron;abaron@docland.es;2021-11-03;;;;;
+Docland;Málaga;Antonia Mari;amartin@spaceland.es;2021-11-03;Entrada;Oficina;Oficina;29006 Calle Flauta Mágica 7;samsung-SM-A202F
+Docland;Málaga;Carlos Cayuela;ccayuela@docland.es;2021-11-03;Salida;Oficina;Oficina;29006 Calle Flauta Mágica 5a;Xiaomi-Mi 9T Pro
+Docland;Málaga;Carlos Cayuela;ccayuela@docland.es;2021-11-03;Entrada;Oficina;Oficina;29006 Calle Flauta Mágica 7;Xiaomi-Mi 9T Pro
+Docland;Málaga;Cristian Martin;cmartin@docland.es;2021-11-03;Entrada;Oficina;Oficina;29006 Calle Flauta Mágica 5a;samsung-SM-G360F
+Docland;Málaga;Cristian Martin;cmartin@docland.es;2021-11-03;Salida;Oficina;Oficina;29006 Calle Flauta Mágica 5a;samsung-SM-G360F
+Docland;Málaga;Eva M. Elena;eelena@docland.es;2021-11-03;Entrada;Oficina;Oficina;29006 Calle Arenisca 16;samsung-SM-A505FN
+Docland;Málaga;Eva M. Elena;eelena@docland.es;2021-11-03;Salida;Oficina;Oficina;29006 Calle Flauta Mágica 5a;samsung-SM-A505FN
+Docland;Málaga;Eva M. Elena;eelena@docland.es;2021-11-03;Entrada;Oficina;Oficina;29006 Calle Arenisca 16;samsung-SM-A505FN
+Docland;Málaga;Francisco José Fernández;fjfernandez@docland.es;2021-11-03;Salida;Oficina;Oficina;29006 Calle Flauta Mágica 5a;Xiaomi-Redmi Note 7
+Docland;Málaga;Francisco José Fernández;fjfernandez@docland.es;2021-11-03;Entrada;Oficina;Oficina;29006 Calle Flauta Mágica 5a;Xiaomi-Redmi Note 7
+Docland;Málaga;Ginesa Camuñez;gcamunez@docland.es;2021-11-03;Salida;Oficina;Oficina;29006 Calle Flauta Mágica 7;HUAWEI-MAR-LX1A
+Docland;Málaga;Ginesa Camuñez;gcamunez@docland.es;2021-11-03;Entrada;Oficina;Oficina;29006 Palacio de Ferias ;HUAWEI-MAR-LX1A
+Docland;Málaga;Kevin Toré;ktore@docland.es;2021-11-03;;;;;
+Docland;Málaga;Lola Lorente;llorente@docland.es;2021-11-03;Salida;Oficina;Oficina;29006 Calle Sherlock Holmes 2;samsung-SM-A705FN
+Docland;Málaga;Lola Lorente;llorente@docland.es;2021-11-03;Entrada;Oficina;Oficina/ Entrada 7:10;29006 Calle Flauta Mágica 5a;samsung-SM-A705FN
+Docland;Málaga;Mari José Rodriguez;mjrodriguez@docland.es;2021-11-03;Salida;Oficina;Oficina;29006 Calle Flauta Mágica 5a;samsung-SM-G360F
+Docland;Málaga;Mari José Rodriguez;mjrodriguez@docland.es;2021-11-03;Entrada;Oficina;Oficina;29006 Calle Flauta Mágica 5a;samsung-SM-G360F
+Docland;Málaga;Mayte López;mlopez@docland.es;2021-11-03;Salida;Oficina;Oficina;29006 Calle Flauta Mágica 5a;HUAWEI-HUAWEI CUN-L01
+Docland;Málaga;Mayte López;mlopez@docland.es;2021-11-03;Entrada;Oficina;Oficina;29006 Calle Flauta Mágica 5a;HUAWEI-HUAWEI CUN-L01
+Docland;Málaga;Piedrasante López;plopez@spaceland.es;2021-11-03;;;;;
+Docland;Málaga;Sonia Linero;slinero@docland.es;2021-11-03;Salida;Oficina;Oficina;29006 Calle Flauta Mágica 5a;samsung-SM-G360F
+Docland;Málaga;Sonia Linero;slinero@docland.es;2021-11-03;Entrada;Oficina;Oficina;29006 Calle Flauta Mágica 5a;samsung-SM-G360F
+Docland;Málaga;Ana Baron;abaron@docland.es;2021-11-04;;;;;
+Docland;Málaga;Antonia Mari;amartin@spaceland.es;2021-11-04;Entrada;Oficina;Oficina;29006 Calle Max Estrella 12;samsung-SM-A202F
+Docland;Málaga;Carlos Cayuela;ccayuela@docland.es;2021-11-04;Entrada;Oficina;Oficina;29006 Calle Flauta Mágica 7;Xiaomi-Mi 9T Pro
+Docland;Málaga;Cristian Martin;cmartin@docland.es;2021-11-04;;;;;
+Docland;Málaga;Eva M. Elena;eelena@docland.es;2021-11-04;;;;;
+Docland;Málaga;Francisco José Fernández;fjfernandez@docland.es;2021-11-04;Entrada;Oficina;Oficina;29006 Calle Flauta Mágica 5a;Xiaomi-Redmi Note 7
+Docland;Málaga;Ginesa Camuñez;gcamunez@docland.es;2021-11-04;Entrada;Oficina;Oficina;29006 Calle Flauta Mágica 5a;HUAWEI-MAR-LX1A
+Docland;Málaga;Kevin Toré;ktore@docland.es;2021-11-04;;;;;
+Docland;Málaga;Lola Lorente;llorente@docland.es;2021-11-04;Entrada;Oficina;Oficina;29006 Calle Flauta Mágica 5a;samsung-SM-A705FN
+Docland;Málaga;Mari José Rodriguez;mjrodriguez@docland.es;2021-11-04;Entrada;Oficina;Oficina;29006 Calle Flauta Mágica 5a;samsung-SM-G360F
+Docland;Málaga;Mayte López;mlopez@docland.es;2021-11-04;Entrada;Oficina;Oficina;29006 Calle Flauta Mágica 5;HUAWEI-HUAWEI CUN-L01
+Docland;Málaga;Piedrasante López;plopez@spaceland.es;2021-11-04;;;;;
+Docland;Málaga;Sonia Linero;slinero@docland.es;2021-11-04;;;;;

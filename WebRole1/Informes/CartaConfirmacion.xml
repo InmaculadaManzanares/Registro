@@ -1,0 +1,93 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Table">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Clave" type="xs:short" minOccurs="0" />
+              <xs:element name="NSolicitud" type="xs:int" minOccurs="0" />
+              <xs:element name="Canal" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="edad" type="xs:int" minOccurs="0" />
+              <xs:element name="OficinaReceptora" type="xs:string" minOccurs="0" />
+              <xs:element name="CuentaCargo" type="xs:string" minOccurs="0" />
+              <xs:element name="FechaEnvio" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FechaBaja" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FechaConfirma" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FechaCargoCta" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FechaCarta" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ListaEspera" type="xs:int" minOccurs="0" />
+              <xs:element name="Forzado" type="xs:boolean" minOccurs="0" />
+              <xs:element name="PteConsulta" type="xs:boolean" minOccurs="0" />
+              <xs:element name="FechaRecepcion" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ObsPteConsulta" type="xs:string" minOccurs="0" />
+              <xs:element name="CodGrupo" type="xs:short" minOccurs="0" />
+              <xs:element name="CodPrecio" type="xs:int" minOccurs="0" />
+              <xs:element name="ControlRepetidos" type="xs:string" minOccurs="0" />
+              <xs:element name="Apellido1" type="xs:string" minOccurs="0" />
+              <xs:element name="Apellido2" type="xs:string" minOccurs="0" />
+              <xs:element name="Nombre" type="xs:string" minOccurs="0" />
+              <xs:element name="FecNac" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Sexo" type="xs:string" minOccurs="0" />
+              <xs:element name="ServBus" type="xs:boolean" minOccurs="0" />
+              <xs:element name="PrimeraAsistencia" type="xs:boolean" minOccurs="0" />
+              <xs:element name="DNITutor" type="xs:string" minOccurs="0" />
+              <xs:element name="Ape1Tutor" type="xs:string" minOccurs="0" />
+              <xs:element name="Ape2Tutor" type="xs:string" minOccurs="0" />
+              <xs:element name="NombreTutor" type="xs:string" minOccurs="0" />
+              <xs:element name="CalleTutor" type="xs:string" minOccurs="0" />
+              <xs:element name="NumeroTutor" type="xs:int" minOccurs="0" />
+              <xs:element name="BloqueTutor" type="xs:string" minOccurs="0" />
+              <xs:element name="EscaleraTutor" type="xs:string" minOccurs="0" />
+              <xs:element name="PisoTutor" type="xs:string" minOccurs="0" />
+              <xs:element name="LetraTutor" type="xs:string" minOccurs="0" />
+              <xs:element name="LocalidadTutor" type="xs:string" minOccurs="0" />
+              <xs:element name="CPTutor" type="xs:string" minOccurs="0" />
+              <xs:element name="CodColonia" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="CodTurno" type="xs:int" minOccurs="0" />
+              <xs:element name="CodDormitorio" type="xs:string" minOccurs="0" />
+              <xs:element name="CodMonitor" type="xs:string" minOccurs="0" />
+              <xs:element name="FechaReintegro" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TipoAsignacion" type="xs:string" minOccurs="0" />
+              <xs:element name="FechaAsignacion" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TelfTutor" type="xs:string" minOccurs="0" />
+              <xs:element name="Regimen" type="xs:string" minOccurs="0" />
+              <xs:element name="CodAutobus" type="xs:short" minOccurs="0" />
+              <xs:element name="AlturaMetros" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="AlturaCentimetros" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="Talla" type="xs:string" minOccurs="0" />
+              <xs:element name="CodVinculo" type="xs:string" minOccurs="0" />
+              <xs:element name="Usuario" type="xs:string" minOccurs="0" />
+              <xs:element name="Telf2Tutor" type="xs:string" minOccurs="0" />
+              <xs:element name="EmailTutor" type="xs:string" minOccurs="0" />
+              <xs:element name="Estado" type="xs:string" minOccurs="0" />
+              <xs:element name="IBAN" type="xs:string" minOccurs="0" />
+              <xs:element name="Colegio" type="xs:string" minOccurs="0" />
+              <xs:element name="DNI" type="xs:string" minOccurs="0" />
+              <xs:element name="DireccionColegio" type="xs:string" minOccurs="0" />
+              <xs:element name="Curso" type="xs:string" minOccurs="0" />
+              <xs:element name="ComoAmigos" type="xs:string" minOccurs="0" />
+              <xs:element name="ComoCarteles" type="xs:string" minOccurs="0" />
+              <xs:element name="ComoInternet" type="xs:string" minOccurs="0" />
+              <xs:element name="ComoMedios" type="xs:string" minOccurs="0" />
+              <xs:element name="ComoOtros" type="xs:string" minOccurs="0" />
+              <xs:element name="ComoPersonal" type="xs:string" minOccurs="0" />
+              <xs:element name="EstadoCobro" type="xs:string" minOccurs="0" />
+              <xs:element name="ProvinciaTutor" type="xs:string" minOccurs="0" />
+              <xs:element name="Descolonia" type="xs:string" minOccurs="0" />
+              <xs:element name="DescTurno" type="xs:string" minOccurs="0" />
+              <xs:element name="FecInicio" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FecFin" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DNIAutoriza" type="xs:string" minOccurs="0" />
+              <xs:element name="Ape1Autoriza" type="xs:string" minOccurs="0" />
+              <xs:element name="Ape2Autoriza" type="xs:string" minOccurs="0" />
+              <xs:element name="NomAutoriza" type="xs:string" minOccurs="0" />
+              <xs:element name="BytesFichero" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

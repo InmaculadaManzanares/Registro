@@ -1,0 +1,5 @@
+﻿SELECT     SOLICITUDES.NSolicitud , SOLICITUDES.nombre,SOLICITUDES.apellido1,SOLICITUDES.apellido2,SOLICITUDES.sexo,
+                       TURNOS.CodColonia, COLONIAS.Descolonia, TURNOS.CodTurno , TURNOS.DescTurno
+FROM            SOLICITUDES INNER JOIN
+                         TURNOS ON Solicitudes.CodColonia = TURNOS.CodColonia AND SolicitudeS.CodTurno = TURNOS.CodTurno INNER JOIN
+                         COLONIAS ON Solicitudes.CodColonia = COLONIAS.CodColonia
