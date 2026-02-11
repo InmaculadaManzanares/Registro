@@ -101,10 +101,7 @@
 
         <!-- Panel de Tabulación -->
         <div role="tabpanel" id="myTab">
-           <%-- <div id="mensaje-popup" class="alert alert-danger">
-                <p id='msgSolicitud' ></p>
-                <a href="#" class="close" data-dismiss="alert">&times;</a>
-            </div>--%>
+ 
             <asp:Panel ID="Panel1" runat="server">
                 <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
                     <ContentTemplate>
@@ -200,11 +197,13 @@
                                                 </div>
                                             </div>
                                         </div>
-                                         <div class="col-sm-12 col-lg-8">
+                                        <div class="col-sm-12 col-lg-8">
                                             <div class="form-group">
-                                                <label class="col-md-3 control-label pq">password</label>
+                                                <label class="col-md-3 control-label pq">email envío</label>
                                                 <div class="col-md-9">
-                                                    <asp:TextBox ID="txtPassword" required="true" MaxLength="100" type="text" runat="server" CssClass="form-control pq"></asp:TextBox>
+                                                    <asp:TextBox ID="txtEmailEnvio" MaxLength="256" type="text"
+                                                        runat="server" CssClass="form-control pq"
+                                                        placeholder="Email real para notificaciones / reset"></asp:TextBox>
                                                 </div>
                                             </div>
                                         </div>
@@ -446,7 +445,7 @@
                                                 <div class="col-md-12 pq" align="center">
                                                     <asp:Button ID="btnsave" runat="server" OnClick="btnsave_Click" Text="Guardar" class="btn btn-sm btn-success-docBox" />
                                                     <asp:Button ID="btncancel" formnovalidate runat="server" Text="Cancelar" class="btn btn-sm btn-cancel-docBox" />
-                                                    <asp:Button ID="btnemail" formnovalidate runat="server" Text="Enviar email con contraseña" class="btn btn-sm btn-cancel-docBox" />
+                                                    <asp:Button ID="btnemail" formnovalidate runat="server" Text="Reset de contraseña" class="btn btn-sm btn-cancel-docBox" />
                                                 </div>
                                             </div>
                                         </div>

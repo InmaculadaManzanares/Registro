@@ -18,6 +18,9 @@
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="css/Master.css" rel="stylesheet" type="text/css" />
+    <script src="scripts/jquery-2.1.3.min.js" type="text/javascript"></script>
+    <script src="scripts/bootstrap.min.js" type="text/javascript"></script>
+
     <title>Registro</title>
     <script type="text/javascript">
 
@@ -159,9 +162,9 @@
                         <div class="form-horizontal">
                             <div class="form-group">
 
-                                <div class="col-md-12" style="padding-top :20px;"">
+                                <div class="col-md-12" style="padding-top :20px;">
                                     <center>
-                                    <asp:label runat="server" ID="lblnombre" color="#252149" style="font-size:large" ></asp:label>
+                                    <asp:label runat="server" ID="lblnombre" style="font-size:large;color:#252149;" ></asp:label>
                                         </center>
                                 </div>                             
                             </div>
@@ -199,9 +202,14 @@
             </div>
             <div class="row">
                 <div class="col-sm-12">
-                    <asp:Panel ID="mensajepopup" runat="server" Visible="true">
+<%--                    <asp:Panel ID="mensajepopup" runat="server" Visible="true">
                         <asp:Label runat="server" ID="msgSolicitud" Text="" />
-                    </asp:Panel>
+                    </asp:Panel>--%>
+                    <asp:Panel ID="mensajepopup" runat="server" Visible="false" CssClass="alert alert-danger" style="margin-top:10px;">
+                            <button type="button" class="close" data-dismiss="alert">&times;</button>
+                            <asp:Label runat="server" ID="msgSolicitud" Text="" />
+                        </asp:Panel>
+
                 </div>
                 <div class="col-sm-12">
                     <!-- Tab panes -->

@@ -9,8 +9,6 @@ Imports System.Text
 Partial Class ListRegistroEmail
     Inherits System.Web.UI.Page
 
-    Private Shared ReadOnly Key As Byte() = Encoding.UTF8.GetBytes("1234567890123456") ' 16 bytes para AES-128
-    Private Shared ReadOnly IV As Byte() = Encoding.UTF8.GetBytes("6543210987654321") ' 16 bytes para AES-128
     Dim msj_alerta As String = String.Empty
     Dim cadenasql_vacia As String = " union all SELECT '' AS Expr1, '' AS Expr2"
     Dim cadenasql_cero As String = " union all SELECT '0' AS Expr1, '' AS Expr2"
@@ -45,18 +43,27 @@ Partial Class ListRegistroEmail
             Session("colorsecundario") = colorsecundario
             Session("usuario") = ""
             Dim email As String = ""
-            email = Request.QueryString("Email").Replace(" ", "+")
-            ' Dim encryptedValue As String = HttpUtility.UrlDecode(encodedValue).Replace(" ", "+")
-            ' "fq3cVwHS1IbdAuSOyKTp22+OSIqqpfLvXmmjh9Bs+FM="
-            ' "fq3cVwHS1IbdAuSOyKTp22 OSIqqpfLvXmmjh9Bs FM="
-            If email <> "" Then
-                Dim nombre As String = Decrypt(email)
-                Session("usuario") = nombre
-                txtnombre.Value = nombre
-                lblnombre.Text = nombre
-            Else
-                Response.Redirect("~/LoginCoriel.aspx")
+            email = Request.QueryString("Email")
+
+            If String.IsNullOrWhiteSpace(email) Then
+                panelresultado.Visible = False
+                mostraralerta("Enlace no válido o incompleto. Vuelve a acceder desde el link recibido.", 2)
+                Exit Sub
             End If
+
+            Dim nombre As String = Decrypt(email)
+
+            If String.IsNullOrWhiteSpace(nombre) Then
+                panelresultado.Visible = False
+                mostraralerta("El enlace ha caducado o no es válido. Solicita uno nuevo.", 2)
+                Exit Sub
+            End If
+
+            Session("usuario") = nombre
+            txtnombre.Value = nombre
+            lblnombre.Text = nombre
+
+
             filtro()
         End If
         ' Inyectar el script en la página
@@ -68,31 +75,25 @@ Partial Class ListRegistroEmail
     End Sub
     Public Function Decrypt(cipherText As String) As String
         Try
-
-            If String.IsNullOrEmpty(cipherText) Then
+            If String.IsNullOrWhiteSpace(cipherText) Then
                 Throw New ArgumentNullException(NameOf(cipherText))
             End If
 
-            Dim cipherBytes = Convert.FromBase64String(cipherText) ' Verificar si es Base64 válido
-            Using aes As Aes = Aes.Create()
-                aes.Key = Key
-                aes.IV = IV
+            Dim masterKeyB64 As String = System.Configuration.ConfigurationManager.AppSettings("UrlCryptoMasterKey")
+            If String.IsNullOrWhiteSpace(masterKeyB64) Then
+                Throw New Exception("Falta la clave UrlCryptoMasterKey en web.config.")
+            End If
 
-                Dim decryptor As ICryptoTransform = aes.CreateDecryptor(aes.Key, aes.IV)
-                Using ms As New MemoryStream(cipherBytes)
-                    Using cs As New CryptoStream(ms, decryptor, CryptoStreamMode.Read)
-                        Using sr As New StreamReader(cs)
-                            Return sr.ReadToEnd()
-                        End Using
-                    End Using
-                End Using
-            End Using
+            ' cipherText viene ya en Base64URL (no hace falta Replace(" ","+"))
+            Return CryptoAes.DecryptFromBase64Url(cipherText, masterKeyB64)
+
         Catch ex As Exception
             msj_alerta = ex.Message
             mostraralerta(msj_alerta, 2)
-            'Throw New FormatException("La cadena proporcionada no es válida como Base64.", ex)
+            Return ""
         End Try
     End Function
+
 
     Private Sub activarcalendario(ByVal txt As String)
         Dim script As String = "activar_calendario('" & "#" & "ContentPlaceHolder1_" & txt & "');"
@@ -366,16 +367,26 @@ Partial Class ListRegistroEmail
 
     End Sub
     ' Mostrar Alerta 
-    Private Sub mostraralerta(cadena As String, ByVal tipo As Integer)
+    'Private Sub mostraralerta(cadena As String, ByVal tipo As Integer)
 
+    '    mensajepopup.Visible = True
+    '    msgSolicitud.Text = cadena
+    '    If tipo = 1 Then
+    '        mensajepopup.CssClass = "alertmsg alert-success"
+    '    Else
+    '        mensajepopup.CssClass = "alertmsg alert-danger"
+    '    End If
+
+    'End Sub
+    Private Sub mostraralerta(cadena As String, ByVal tipo As Integer)
         mensajepopup.Visible = True
         msgSolicitud.Text = cadena
-        If tipo = 1 Then
-            mensajepopup.CssClass = "alertmsg alert-success"
-        Else
-            mensajepopup.CssClass = "alertmsg alert-danger"
-        End If
 
+        If tipo = 1 Then
+            mensajepopup.CssClass = "alert alert-success"
+        Else
+            mensajepopup.CssClass = "alert alert-danger"
+        End If
     End Sub
 
     ' Limpiar Campos 

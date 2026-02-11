@@ -386,6 +386,8 @@
     <Content Include="Plantillas\Registro.html" />
     <Content Include="pdfobject.js" />
     <Content Include="RegistroHorario.aspx" />
+    <Content Include="ResetPassword.aspx" />
+    <Content Include="ResetPasswordRequest.aspx" />
     <Content Include="Scripts\1.4\jquery.min.js" />
     <Content Include="Scripts\1.8\jquery-ui.min.js" />
     <Content Include="Scripts\bootstrap-datepicker.js" />
@@ -516,6 +518,7 @@
       <DependentUpon>Consultas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="CryptoAes.vb" />
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -623,6 +626,7 @@
       <DependentUpon>PaginaPrincipal.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="PasswordHasher.vb" />
     <Compile Include="principal.aspx.designer.vb">
       <DependentUpon>principal.aspx</DependentUpon>
     </Compile>
@@ -637,6 +641,21 @@
       <DependentUpon>RegistroHorario.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="ResetPassword.aspx.designer.vb">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ResetPassword.aspx.vb">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResetPasswordRequest.aspx.designer.vb">
+      <DependentUpon>ResetPasswordRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ResetPasswordRequest.aspx.vb">
+      <DependentUpon>ResetPasswordRequest.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ResetToken.vb" />
     <Compile Include="ViewSwitcher.ascx.vb">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

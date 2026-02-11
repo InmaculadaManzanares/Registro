@@ -176,13 +176,13 @@ Partial Public Class MtoUsuario
     Protected WithEvents txtemail As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Control txtPassword.
+    '''Control txtEmailEnvio.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtPassword As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtEmailEnvio As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''Control txtnombre.

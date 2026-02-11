@@ -55,7 +55,7 @@
                 <br />
                 <br />
           
-                <div id="alert" class="alert alert-danger">
+                <div id="alert" class="alert alert-danger" style="display:none;">
                   <button type="button" class="close" data-dismiss="alert">&times;</button>
                   <asp:Label ID="mensaje" style ="white-space: normal;" multiline ="true"  runat="server" CssClass="label"></asp:Label>
                 </div>
@@ -79,6 +79,43 @@
                             </asp:LinkButton>
                         </center>  
                         </asp:Panel> 
+                    <!-- Link Cambiar/Restablecer -->
+                    <div style="margin-top:10px; text-align:center;">
+                        <asp:LinkButton ID="lnkReset" runat="server" CausesValidation="False">
+                            Cambiar/Restablecer contraseña
+                        </asp:LinkButton>
+                    </div>
+
+                    <!-- Panel reset (oculto al inicio) -->
+                    <asp:Panel ID="panelReset" runat="server" Visible="false" style="margin-top:15px;">
+                      <div id="divResetEmail" runat="server" class="inner-addon left-addon">
+                            <i class="glyphicon glyphicon-envelope"></i>
+                            <asp:TextBox ID="txtResetEmail" runat="server"
+                                CssClass="form-control"
+                                placeholder="Correo electrónico"></asp:TextBox>
+                        </div>
+
+                        <center style="margin-top:10px;">
+                            <asp:Button ID="btnResetEnviar" runat="server"
+                                CssClass="btn btn-login btn-sm"
+                                Text="Enviar enlace" />
+                        </center>
+
+                        <center style="margin-top:10px;">
+                            <asp:LinkButton ID="lnkVolverAcceso" runat="server" CausesValidation="False">
+                                Volver al acceso
+                            </asp:LinkButton>
+                        </center>
+                    </asp:Panel>
+
+
+
+
+
+
+
+
+
                          <asp:Panel ID ="panel2" runat="server" >
                         <div class="inner-addon left-addon">                       
                             <asp:label ID="txtnombre" runat="server" style="font-weight: bold;font-size: 18px;" >

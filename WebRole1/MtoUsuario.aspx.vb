@@ -54,7 +54,7 @@ Partial Class MtoUsuario
     Protected Sub CargaMatriz(ByVal cond_filtro As String)
         Dim cadena As String
         Me.SqlDS.ConnectionString = VariablesGlobales.CadenadeConexion(Application)
-        cadena = "SELECT        Usuarios.Id, Usuarios.email, Usuarios.password, Usuarios.Nombre, empresas.Nombre AS empresa, CASE WHEN verificado = 0 THEN 'No' ELSE 'Si' END AS verificado, 
+        cadena = "SELECT        Usuarios.Id, Usuarios.email,Usuarios.EmailEnvio, Usuarios.password, Usuarios.Nombre, empresas.Nombre AS empresa, CASE WHEN verificado = 0 THEN 'No' ELSE 'Si' END AS verificado, 
                          CASE WHEN Administrador = 0 THEN 'No' ELSE 'Si' END AS Administrador, centros.Nombre AS centro
 FROM            Usuarios LEFT OUTER JOIN
                          centros ON Usuarios.Centro = centros.Id LEFT OUTER JOIN
@@ -177,7 +177,6 @@ FROM            Usuarios LEFT OUTER JOIN
                         .Tabla = "usuarios"
                         .add_valor(CAMPO_NOMBRE, txtnombre.Text)
                         .add_valor(CAMPO_EMAIL, txtemail.Text)
-                        .add_valor(CAMPO_PASSWORD, txtPassword.Text)
                         .add_valor("Empresa", cmbempresa.Text)
                         .add_valor("centro", cmbcentro.Text)
                         Dim adm As String
@@ -289,7 +288,6 @@ FROM            Usuarios LEFT OUTER JOIN
                     .Tabla = "usuarios"
                     .add_valor(CAMPO_NOMBRE, txtnombre.Text)
                     .add_valor(CAMPO_EMAIL, txtemail.Text)
-                    .add_valor(CAMPO_PASSWORD, txtPassword.Text)
                     .add_valor("Empresa", cmbempresa.Text)
                     .add_valor("centro", cmbcentro.Text)
                     Dim adm As String
@@ -463,8 +461,12 @@ FROM            Usuarios LEFT OUTER JOIN
         For Each dr In dt.Rows
             txtnombre.Text = CStr(dr(CAMPO_NOMBRE))
             If dr(CAMPO_EMAIL).ToString <> "" Then txtemail.Text = CStr(dr(CAMPO_EMAIL))
+            If dr("EmailEnvio").ToString <> "" Then
+                txtEmailEnvio.Text = CStr(dr("EmailEnvio"))
+            Else
+                txtEmailEnvio.Text = ""  ' o txtemail.Text si quieres fallback
+            End If
             If dr("nombre").ToString <> "" Then txtnombre.Text = CStr(dr("nombre"))
-            If dr("password").ToString <> "" Then txtPassword.Text = CStr(dr("password"))
             If dr("Empresa").ToString <> "" Then cmbempresa.Text = CStr(dr("Empresa"))
             If dr("centro").ToString <> "" Then cmbcentro.Text = CStr(dr("centro"))
             If dr("verificado").ToString = "1" Then cmbveri.SelectedValue = "Si" Else cmbveri.SelectedValue = "No"
@@ -595,8 +597,8 @@ FROM            Usuarios LEFT OUTER JOIN
     Private Sub borra_campos()
         txtid.Text = String.Empty
         txtemail.Text = String.Empty
+        txtEmailEnvio.Text = String.Empty
         txtnombre.Text = String.Empty
-        txtPassword.Text = String.Empty
         cmbadmini.Text = "No"
         cmbveri.Text = "No"
         lunes1.Text = String.Empty
@@ -714,7 +716,7 @@ FROM            Usuarios LEFT OUTER JOIN
                         .Tabla = "usuarios"
                         .add_valor(CAMPO_NOMBRE, txtnombre.Text)
                         .add_valor(CAMPO_EMAIL, txtemail.Text)
-                        .add_valor(CAMPO_PASSWORD, txtPassword.Text)
+                        .add_valor("EmailEnvio", txtEmailEnvio.Text)
                         .add_valor("Empresa", cmbempresa.Text)
                         .add_valor("centro", cmbcentro.Text)
                         Dim adm As String
@@ -823,7 +825,7 @@ FROM            Usuarios LEFT OUTER JOIN
                     .Tabla = "usuarios"
                     .add_valor(CAMPO_NOMBRE, txtnombre.Text)
                     .add_valor(CAMPO_EMAIL, txtemail.Text)
-                    .add_valor(CAMPO_PASSWORD, txtPassword.Text)
+                    .add_valor("EmailEnvio", txtEmailEnvio.Text)
                     .add_valor("Empresa", cmbempresa.Text)
                     .add_valor("centro", cmbcentro.Text)
                     Dim adm As String
@@ -952,19 +954,97 @@ FROM            Usuarios LEFT OUTER JOIN
         activar_panel()
     End Sub
 
+    'Private Sub btnemail_Click(sender As Object, e As EventArgs) Handles btnemail.Click
+    '    If txtid.Text <> "" Then
+    '        If enviaremail(txtPassword.Text) Then
+    '            msj_alerta = "Le hemos enviado un correo al usuario con su contraseña"
+    '            Grabar_Accion(0, ACCION_EMAIL_RECUPERAR_CONTRASEÑA, Now())
+    '            mostraralerta()
+    '            activar_panel_lista()
+    '        End If
+    '    Else
+    '        msj_alerta = "Debe crear primero el usuario"
+    '        mostraralerta()
+    '    End If
+    'End Sub
     Private Sub btnemail_Click(sender As Object, e As EventArgs) Handles btnemail.Click
         If txtid.Text <> "" Then
-            If enviaremail(txtPassword.Text) Then
-                msj_alerta = "Le hemos enviado un correo al usuario con su contraseña"
-                Grabar_Accion(0, ACCION_EMAIL_RECUPERAR_CONTRASEÑA, Now())
+
+            Dim loginUsuario As String = txtemail.Text
+            Dim emailEnvio As String = txtEmailEnvio.Text
+
+            ' fallback si aún no está informado
+            If emailEnvio = "" Then emailEnvio = txtemail.Text
+
+            If EnviarResetPassword(loginUsuario, emailEnvio) Then
+                msj_alerta = "Le hemos enviado un correo al usuario para restablecer la contraseña"
                 mostraralerta()
                 activar_panel_lista()
+            Else
+                msj_alerta = "No se pudo enviar el correo, inténtelo de nuevo"
+                mostraralerta()
             End If
+
         Else
             msj_alerta = "Debe crear primero el usuario"
             mostraralerta()
         End If
     End Sub
+
+    Private Function EnviarResetPassword(loginUsuario As String, emailEnvio As String) As Boolean
+        Dim con As New ConexionSQL(VariablesGlobales.CadenadeConexion(Application))
+
+        Try
+            If String.IsNullOrWhiteSpace(loginUsuario) Then Return False
+            If String.IsNullOrWhiteSpace(emailEnvio) Then Return False
+
+            ' 1) Generar token y hash
+            Dim token As String = ResetToken.GenerateTokenBase64Url(32) ' 256-bit
+            Dim tokenHash As Byte() = ResetToken.Sha256Bytes(token)
+
+            ' 2) Guardar token en BD (15 min)
+            Dim expires As Date = DateAdd(DateInterval.Minute, 15, Now)
+
+            Dim tokenHex As String = "0x" & BitConverter.ToString(tokenHash).Replace("-", "")
+
+            ' OJO: Email aquí es el LOGIN (usuario), no el email real
+            Dim sql As String =
+            "INSERT INTO PasswordResetTokens (Email, TokenHash, ExpiresAt, Used) VALUES (" &
+            v(loginUsuario) & "," & tokenHex & "," & Util.fechasql(expires, tipofecha.yyyyddMMmmss) & ",0)"
+
+            con.Ejecuta(sql)
+
+            ' 3) Enlace (u = loginUsuario)
+            Dim baseUrl As String = System.Configuration.ConfigurationManager.AppSettings("url").ToString()
+            Dim link As String = baseUrl.TrimEnd("/"c) & "/ResetPassword.aspx?u=" &
+                             Server.UrlEncode(loginUsuario) & "&t=" & Server.UrlEncode(token)
+
+            ' 4) Email (se envía al email REAL)
+            Dim correo As New EnviodeEmail
+            Dim asunto As String = "Restablecer contraseña"
+
+            Dim urlTemplate As String = Server.MapPath("~/Plantillas/RecuperarContraseña.html")
+            Dim urlimagen As String = System.Configuration.ConfigurationManager.AppSettings("url").ToString()
+
+            Dim Template As New System.Text.StringBuilder
+            Template.Append(GetHTMLFromAddress(urlTemplate))
+            Template.Replace("$USER$", loginUsuario)
+            Template.Replace("$CONTRASE$", link)
+            Template.Replace("$URLIMAGEN$", urlimagen)
+
+            Dim fromEmail As String = VariablesGlobales.Email_WebCampus(Application)
+            Return correo.EnviarEmail_html(fromEmail, emailEnvio, asunto, Template.ToString(), "", Application)
+
+        Catch
+            Return False
+        Finally
+            If con IsNot Nothing Then
+                con.CerrarConexion()
+                con = Nothing
+            End If
+        End Try
+    End Function
+
 
     Private Function enviaremail(contraseña) As Boolean
         Dim correo As New EnviodeEmail

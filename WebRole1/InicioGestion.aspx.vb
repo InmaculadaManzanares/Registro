@@ -56,31 +56,48 @@ Partial Class InicioGestion
 
     Protected Sub ImageButton1_Click(sender As Object, e As EventArgs) Handles ImageButton1.Click
         Dim bien As Boolean = False
-        Dim con As ConexionSQL
+        Dim con As ConexionSQL = Nothing
         Dim SEN As New SentenciaSQL
         Dim conexion_bd As Boolean = True
-        Dim serr as string = string.empty
-        con = New ConexionSQL(VariablesGlobales.CadenadeConexion(Application))
-        Try
 
+        Try
+            con = New ConexionSQL(VariablesGlobales.CadenadeConexion(Application))
+
+            ' 1) Buscar usuario admin por login (email = usuario/login)
+            ' Traemos el password almacenado (hash) y el email (login)
             With SEN
                 .Limpia()
-                .sql_select = "email"
+                .sql_select = "email, password"
                 .sql_from = "Usuarios"
-                .add_condicion("password", txtcontraseña.Text)
                 .add_condicion("email", txtusuario.Text)
                 .add_condicion("administrador", "1")
             End With
-            USUARIO = con.ejecuta1v_string(SEN.texto_sql)
-            If USUARIO.Trim <> "" Then
-                bien = True
-                'usuario
-                'VariablesGlobales.Usuario(Session, Application) = USUARIO
-                Session("usuario") = USUARIO
 
+            Dim dt As DataTable = con.SelectSQL(SEN.texto_sql)
+
+            If dt Is Nothing OrElse dt.Rows.Count = 0 Then
+                Me.mensaje.Text = "El usuario no es correcto o no tiene permiso"
+                MostrarAlerta()
+                Exit Sub
+            End If
+
+            Dim login As String = dt.Rows(0)("email").ToString()
+            Dim storedHash As String = dt.Rows(0)("password").ToString()
+
+            ' 2) Verificar contraseña introducida contra el hash almacenado
+            If String.IsNullOrWhiteSpace(storedHash) Then
+                Me.mensaje.Text = "El usuario no es correcto o no tiene permiso"
+                MostrarAlerta()
+                Exit Sub
+            End If
+
+            If PasswordHasher.VerifyPassword(txtcontraseña.Text, storedHash) Then
+                bien = True
+                Session("usuario") = login
             Else
                 Me.mensaje.Text = "El usuario no es correcto o no tiene permiso"
                 MostrarAlerta()
+                Exit Sub
             End If
 
         Catch ex As Exception
@@ -88,19 +105,16 @@ Partial Class InicioGestion
             Me.mensaje.Text = "Imposible conectar con la BD"
             MostrarAlerta()
         Finally
-            If Not con Is Nothing Then
+            If con IsNot Nothing Then
                 con.CerrarConexion()
+                con = Nothing
             End If
         End Try
 
-
         If bien Then
-            Grabar_Accion("Login = '" & Session("usuario"), "login", Now())
+            Grabar_Accion("Login = '" & Session("usuario") & "'", "login", Now())
             Response.Redirect("~/ListRegistro.aspx")
-
         End If
-
-
     End Sub
 
     Private Sub Grabar_Accion(ByVal detail As String, ByVal accion As String, ByVal fechaahora As Date)

@@ -68,6 +68,60 @@ Partial Public Class RegistroHorario
     Protected WithEvents ImageButton1 As Global.System.Web.UI.WebControls.LinkButton
 
     '''<summary>
+    '''Control lnkReset.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lnkReset As Global.System.Web.UI.WebControls.LinkButton
+
+    '''<summary>
+    '''Control panelReset.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents panelReset As Global.System.Web.UI.WebControls.Panel
+
+    '''<summary>
+    '''Control divResetEmail.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents divResetEmail As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
+    '''Control txtResetEmail.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtResetEmail As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control btnResetEnviar.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents btnResetEnviar As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''Control lnkVolverAcceso.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lnkVolverAcceso As Global.System.Web.UI.WebControls.LinkButton
+
+    '''<summary>
     '''Control panel2.
     '''</summary>
     '''<remarks>
